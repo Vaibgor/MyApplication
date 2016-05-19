@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TRACK AV</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="title_activity_login_">Login_Activity</string>
+    <string name="title_activity_search_activity">Track Details</string>
+    <string name="title_activity_searchactivity">Searchactivity</string>
+    <string name="title_activity_alert_demo">AlertDemo</string>
+    <string name="remark">CUST STAY 25 YRS OWN APP 1 SIM SPL 299 PLAN TPC KULKARNI CONF APP WORKING IN PAWAN BANK SINCE 3 YRS AS CLARK AT RAVET , NEGATIVE SHORT REASON: Not Applicable</string>
+    <string name="title_activity_custom_list">CustomList</string>
+    <string name="title_activity_custom_adapter">CustomAdapter</string>
+    <string name="title_activity_login">login</string>
+    <string name="title_activity_database">DatabaseManager</string>
+</resources>

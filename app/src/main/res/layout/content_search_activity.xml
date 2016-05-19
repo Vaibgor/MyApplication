@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background1"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.web3.myapplication.Search_activity"
+    tools:showIn="@layout/activity_search_activity">
+
+    <ScrollView
+        android:id="@+id/svHeaderDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lLSearchCAF"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Search By CAF"
+                    android:textColor="#3d1010" />
+                <!--
+                                <EditText
+                                    android:id="@+id/etCAFnumber"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/edittext_shape"
+                                    android:hint="Enter CAF Number"
+                                    android:paddingLeft="60dp" />-->
+                <AutoCompleteTextView
+                    android:id="@+id/autoCAFnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/edittext_shape"
+                    android:hint="Enter CAF Number"
+                    android:paddingLeft="60dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lLByDel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLSearchCAF"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Search By DEL"
+                    android:textColor="#3d1010" />
+
+                <EditText
+                    android:id="@+id/etDELnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/edittext_shape"
+                    android:hint="Enter DEL Number"
+                    android:inputType="textPassword"
+                    android:paddingLeft="60dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Search By Date"
+                    android:textColor="#3d1010" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lLByDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLByDel"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/lLFromDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lLSearchCAF"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/etfromDate"
+                                android:layout_width="fill_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/edittext_shape"
+                                android:gravity="center"
+                                android:hint="From "
+                                android:paddingLeft="60dp"
+                                android:textAlignment="textStart"
+                                android:textColor="#000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/btnDateFrom"
+                                android:layout_width="40dp"
+                                android:layout_height="50dp"
+                                android:background="#3d1010"
+                                android:layout_gravity="right"
+                                android:padding="10dp"
+                                android:src="@drawable/cal" />
+                        </FrameLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lLToDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lLSearchCAF"
+                    android:layout_weight=".5"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/etToDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/edittext_shape"
+                                android:gravity="center"
+                                android:hint="To"
+                                android:paddingLeft="60dp"
+                                android:textAlignment="textStart"
+                                android:textColor="#000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/btnDateTo"
+                                android:layout_width="40dp"
+                                android:layout_height="50dp"
+                                android:background="#3d1010"
+                                android:padding="10dp"
+                                android:layout_gravity="right"
+                                android:src="@drawable/cal" />
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/lLByDate"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_shape"
+                android:gravity="center"
+                android:text="Search"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/lLListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/svHeaderDetails"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lLListGrid"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorYellow"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight=".3"
+                android:gravity="center"
+                android:text="CAF Number"
+                android:textColor="#3d1010"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight=".3"
+                android:gravity="center"
+                android:text="Status"
+                android:textColor="#3d1010"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight=".3"
+                android:gravity="center"
+                android:text="Rating"
+                android:textColor="#3d1010"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lvByDateResult"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/background"
+            android:layout_below="@+id/lLListGrid"
+            android:scrollbars="vertical"></ListView>
+    </LinearLayout>
+</RelativeLayout>
